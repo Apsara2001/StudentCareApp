@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import LoginScreen from "./screens/LoginScreen";
+//import ProfileScreen from "./screens/ProfileScreen";
+import { PaperProvider } from "react-native-paper";
+const Stack = createNativeStackNavigator();
+const appTitle = "UOV Student Care";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <PaperProvider>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerStyle: { backgroundColor: "#70116d" },
+              headerTitleStyle: { color: "#fff" },
+              headerTitleAlign: "center",
+              headerTintColor: "#fff",
+            }}
+            initialRouteName="Login"
+          >
+            <Stack.Screen
+              name="Login"
+              component={LoginScreen}
+              options={{ title: appTitle }}
+            />
+            <Stack.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{ title: appTitle }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </PaperProvider>
+    </SafeAreaProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
