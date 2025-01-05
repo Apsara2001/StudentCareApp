@@ -46,4 +46,72 @@ const CourseScreen = ({ route }) => {
     </>
   );
 };
+const styles = StyleSheet.create({
+    bannerContainer: {
+      alignItems: "center",
+    },
+    image: {
+      width: 350,
+      borderRadius: 10,
+      marginTop: -25,
+    },
+    courseCard: {
+      alignItems: "center",
+      backgroundColor: "#fff",
+      marginHorizontal: 30,
+      paddingHorizontal: 15,
+      paddingTop: 25,
+      paddingBottom: 45,
+      elevation: 5,
+      marginTop: -25,
+    },
+    profileImage: {
+      width: 200,
+      height: 200,
+    },
+    name: {
+      fontSize: 34,
+      fontWeight: "bold",
+      marginTop: 10,
+      textAlign: "center",
+    },
+    subDetails: {
+      fontSize: 17,
+      marginTop: 10,
+      textAlign: "center",
+    },
+    divider: {
+      width: 300,
+      height: 2,
+      marginTop: 30,
+    },
+    courseInfoHeader: {
+      width: "90%",
+      fontSize: 17,
+      marginTop: 20,
+      fontWeight: "bold",
+    },
+    courseDetailsContainer: {
+      width: "90%",
+      marginTop: 15,
+      gap: 2,
+    },
+    courseDetails: {
+      fontSize: 14,
+      lineHeight: 21,
+    },
+    footer: {
+      backgroundColor: "#70116d",
+      marginHorizontal: 15,
+      position: "absolute",
+      bottom: 0,
+      paddingVertical: 8,
+      marginBottom: 10,
+    },
+    footerText: {
+      fontSize: 15,
+      textAlign: "center",
+      color: "#fff",
+    },
+  });
 export default CourseScreen;
