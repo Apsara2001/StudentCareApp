@@ -31,7 +31,7 @@ The Student Care App is a comprehensive mobile application designed to support s
 
 1. **Clone the repository**:
    ```bash
-   git clone
+   git clone https://github.com/Apsara2001/StudentCareApp.git
    ```
 2. **Navigate to the project directory**:
    ```bash
