@@ -5,7 +5,7 @@ import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
 import { PaperProvider } from "react-native-paper";
 const Stack = createNativeStackNavigator();
-const appTitle = "UOV Student Care";
+const appTitle = "Student Care University Of Vavuniya";
 
 export default function App() {
   return (

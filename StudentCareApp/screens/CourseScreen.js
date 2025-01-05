@@ -2,7 +2,7 @@ import { Image, ScrollView, StyleSheet, View } from "react-native";
 import banner from "../assets/banner.png";
 import React from "react";
 import { Divider, Text } from "react-native-paper";
-import { courses } from "../assets/data/StudentsDb";
+import { courses } from "../assets/data/StudentDb";
 const CourseScreen = ({ route }) => {
   const { student } = route.params;
   const course = courses.find((course) => course.id === student.course_id);
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
       paddingBottom: 45,
       elevation: 5,
       marginTop: -25,
+      color:"#00000",
     },
     profileImage: {
       width: 200,
@@ -74,31 +75,37 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       marginTop: 10,
       textAlign: "center",
+      color:"#00000",
     },
     subDetails: {
       fontSize: 17,
       marginTop: 10,
       textAlign: "center",
+      color:"#00000",
     },
     divider: {
       width: 300,
       height: 2,
       marginTop: 30,
+      color:"#00000",
     },
     courseInfoHeader: {
       width: "90%",
       fontSize: 17,
       marginTop: 20,
       fontWeight: "bold",
+      color:"#00000",
     },
     courseDetailsContainer: {
       width: "90%",
       marginTop: 15,
       gap: 2,
+      color:"#00000",
     },
     courseDetails: {
       fontSize: 14,
       lineHeight: 21,
+      color:"#00000",
     },
     footer: {
       backgroundColor: "#70116d",

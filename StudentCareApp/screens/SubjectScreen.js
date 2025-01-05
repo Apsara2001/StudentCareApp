@@ -2,7 +2,7 @@ import { Image, ScrollView, StyleSheet, View } from "react-native";
 import banner from "../assets/banner.png";
 import React from "react";
 import { Divider, Text } from "react-native-paper";
-import { marks, subjects } from "../assets/data/StudentsDb";
+import { marks, subjects } from "../assets/data/StudentDb";
 const SubjectScreen = ({ route }) => {
   const { student } = route.params;
   const subjectList = subjects.filter(
@@ -42,8 +42,8 @@ const SubjectScreen = ({ route }) => {
           </Text>
           <View style={styles.markDetailsContainer}>
             <View style={styles.tableHeader}>
-              <Text variant="bodySmall">Subject</Text>
-              <Text variant="bodySmall">Marks</Text>
+            <Text variant="bodySmall" style={styles.tableHeaderName}>Subject</Text>
+            <Text variant="bodySmall" style={styles.tableHeaderMarks}>Marks</Text>
             </View>
             <Divider style={styles.secondDivider} bold={true} />
             {result &&
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
       paddingBottom: 45,
       elevation: 5,
       marginTop: -25,
+      color:"#00000",
     },
     profileImage: {
       width: 200,
@@ -97,31 +98,37 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       marginTop: 10,
       textAlign: "center",
+      color:"#00000",
     },
     subDetails: {
       fontSize: 17,
       marginTop: 10,
       textAlign: "center",
+      color:"#00000",
     },
     divider: {
       width: 300,
       height: 2,
       marginTop: 30,
+      color:"#00000",
     },
     marksInfoHeader: {
       width: "90%",
       fontSize: 17,
       marginTop: 20,
       fontWeight: "bold",
+      color:"#00000",
     },
     markDetailsContainer: {
       width: "90%",
       marginTop: 15,
       gap: 2,
+      color:"#00000",
     },
     markDetails: {
       fontSize: 14,
       lineHeight: 21,
+      color:"#00000",
     },
     footer: {
       backgroundColor: "#70116d",
@@ -143,12 +150,14 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       paddingHorizontal: 15,
       gap: 150,
+      color:"#00000",
     },
     secondDivider: {
       width: 300,
       height: 2,
       marginTop: 10,
       opacity: 0.35,
+      color:"#00000",
     },
     tableData: {
       width: "90%",
@@ -156,11 +165,19 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       justifyContent: "space-between",
       paddingHorizontal: 15,
+      color:"#00000",
     },
     tdText: {
       fontWeight: "bold",
       fontSize: 17,
       marginTop: 10,
+      color:"#00000",
     },
+    tableHeaderName:{
+        color:"#00000",
+      },
+      tableHeaderMarks:{
+        color:"#00000",
+      },
   });
 export default SubjectScreen;
